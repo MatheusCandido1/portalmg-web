@@ -1,0 +1,49 @@
+
+:root {
+  --primary-main: #0c87ca;
+  --primary-dark: #0b77b2;
+  --primary-light: #0d97e2;
+  --background: #e6f3f9;
+  --text-primary: #3E3E3E;
+
+  --success-main: #92d517;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;;
+}
+
+body {
+  font-size: 16px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.cluster-badge {
+  background-color: var(--success-main);
+  padding: 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.core-badge {
+  background-color: #e8336b;
+  padding: 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 14px;
+}

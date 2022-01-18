@@ -1,0 +1,73 @@
+.home-header {
+  display: flex;
+  flex-direction: column;
+}
+
+strong {
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+small {
+  margin-top: 0.5rem;
+  color: var(--text-primary);
+}
+
+input {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 0.75rem;
+  height: 3rem;
+  border: none;
+  outline: 0;
+  border: 2px solid #FFF;
+  padding: 0 1rem;
+  transition: border-color 0.2s ease-in;
+}
+
+input:focus {
+  border-color: var(--primary-main);
+}
+
+@media (max-width: 576px) {  
+  .home-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  .home-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .home-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .home-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+}
