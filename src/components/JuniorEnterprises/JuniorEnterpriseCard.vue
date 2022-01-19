@@ -1,14 +1,17 @@
 <template>
   <div class="card">
-    <span class="card-logo">
-    </span>
+    <div class="card-logo">
+      <span class="logo-frame">
+        <img :src="juniorEnterprise.logo" />
+      </span>
+    </div>
     <span class="card-info">
        <strong>
-        InfoAlto Empresa Júnior
+        {{ juniorEnterprise.name }}
       </strong>
       <section class="ej-info">
+        <CoreBadge :core="juniorEnterprise.core" />
         <div class="cluster-badge"> Cluster 5</div>
-        <div class="core-badge"> Central </div>
       </section>
       <button>Ver resultados <i class="mdi mdi-send"></i></button>
     </span>
@@ -16,8 +19,19 @@
 </template>
 
 <script>
+import CoreBadge from '@/components/Cores/CoreBadge.vue';
+
 export default {
   name: 'JuniorEnterpriseCard',
+  components: {
+    CoreBadge,
+  },
+  props: {
+    juniorEnterprise: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
 };
 </script>
 
@@ -49,9 +63,28 @@ export default {
   }
 }
 
+img {
+  object-fit: contain;
+  height: auto;
+  max-height: 100%;
+}
+
 .card-logo {
   background: var(--primary-main);
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  background: #FFF;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
 }
 
 .card-info {

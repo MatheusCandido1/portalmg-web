@@ -37,13 +37,3 @@ button {
   font-weight: 600;
   font-size: 14px;
 }
-
-.core-badge {
-  background-color: #e8336b;
-  padding: 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-  color: #FFF;
-  font-weight: 600;
-  font-size: 14px;
-}
