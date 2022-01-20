@@ -7,6 +7,8 @@ import App from './App.vue';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import '@/assets/styles/global.css';
 
+const infiniteScroll = require('vue-infinite-scroll');
+
 require('dotenv').config();
 
 Vue.config.productionTip = false;
@@ -18,6 +20,7 @@ Vue.use(VueLoading, {
   height: 100,
   width: 100,
 });
+Vue.use(infiniteScroll);
 
 new Vue({
   router,

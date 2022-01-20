@@ -20,6 +20,8 @@
         :juniorEnterprise="juniorEnterprise"
       />
     </section>
+    <div v-infinite-scroll="scroll" infinite-scroll-disabled="busy" infinite-scroll-distance="3" />
+
   </div>
 </template>
 
@@ -38,6 +40,8 @@ export default {
       searchTerm: '',
       juniorEnterprises: [],
       orderByName: 'asc',
+      page: 1,
+      busy: false,
     };
   },
   computed: {
@@ -46,9 +50,6 @@ export default {
       return filteredData.filter((je) => (je.name.toLowerCase().includes(this.searchTerm.toLowerCase())));
     },
   },
-  created() {
-    this.getJuniorEnterprises(this.orderByName);
-  },
   watch: {
     orderByName(newOrder) {
       this.getJuniorEnterprises(newOrder);
@@ -56,10 +57,10 @@ export default {
   },
   methods: {
     // eslint-disable-next-line consistent-return
-    async getJuniorEnterprises(orderBy) {
+    async getJuniorEnterprises(orderBy, page) {
       const loader = this.$loading.show({});
       try {
-        this.juniorEnterprises = await JuniorEnterpriseService.getJuniorEnterprises(orderBy);
+        this.juniorEnterprises = await JuniorEnterpriseService.getJuniorEnterprises(orderBy, page);
       } catch (error) {
         return error;
       } finally {
@@ -72,6 +73,15 @@ export default {
       } else {
         this.orderByName = 'asc';
       }
+    },
+    async scroll() {
+      await JuniorEnterpriseService.getJuniorEnterprises(this.orderByName, this.page).then((data) => {
+        if (data.length > 0) {
+          this.juniorEnterprises.push(...data);
+        }
+      });
+
+      this.page += 1;
     },
   },
 };
