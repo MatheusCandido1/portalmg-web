@@ -1,5 +1,5 @@
 # portalmg-web
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/24fe26ad-cbd6-4d34-b6ff-2ffe32299356/deploy-status)](https://app.netlify.com/sites/portalmg-web/deploys)
 ## Project setup
 ```
 yarn install
