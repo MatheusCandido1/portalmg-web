@@ -3,6 +3,26 @@
   flex-direction: column;
 }
 
+.home-filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.button-filter {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-filter > svg {
+  width: 17px;
+  height: 17px;
+  margin-left: 8px;
+  transition: transform 0.5s ease;
+}
+
 strong {
   color: var(--text-primary);
   font-size: 18px;
@@ -31,7 +51,7 @@ input:focus {
 
 @media (max-width: 576px) {  
   .home-list {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,7 +62,7 @@ input:focus {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
   .home-list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,7 +73,7 @@ input:focus {
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
   .home-list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -64,7 +84,7 @@ input:focus {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
   .home-list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
