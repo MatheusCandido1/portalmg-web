@@ -21,11 +21,13 @@ body {
   background: var(--background);
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 button {
   cursor: pointer;
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 5px;
 }
 
 .cluster-badge {

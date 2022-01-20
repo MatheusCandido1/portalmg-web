@@ -28,6 +28,9 @@ export default {
 main {
   height: 100%;
   margin-top: 2rem;
-  padding: 0 3rem;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1000px;
 }
 </style>

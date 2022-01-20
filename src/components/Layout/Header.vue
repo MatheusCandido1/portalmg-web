@@ -19,6 +19,7 @@ export default {
     justify-content: center;
     align-items: center;
     background-color: var(--primary-main);
-    width: 100vw;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 </style>

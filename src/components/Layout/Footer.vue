@@ -27,15 +27,16 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    left: 0;
+    position: relative;
     bottom: 0;
+    left: 0;
     background: var(--primary-main);
     width: 100%;
     height: 5rem;
     padding: 0 1.5rem;
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
+    margin-top: 2rem;
   }
 
   .logo-text {

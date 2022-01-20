@@ -13,7 +13,7 @@
         <CoreBadge :core="juniorEnterprise.core" />
         <div class="cluster-badge"> Cluster 5</div>
       </section>
-      <button>Ver resultados <i class="mdi mdi-send"></i></button>
+      <button class="card-button">Ver resultados <i class="mdi mdi-send"></i></button>
     </span>
   </div>
 </template>
@@ -36,36 +36,49 @@ export default {
 </script>
 
 <style>
+.card {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-main);
+  overflow: hidden;
+  height: 350px;
+}
 
 @media (max-width: 576px) {
   .card {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
     width: 100%;
-    height: 350px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    background: var(--primary-main);
-    overflow: hidden;
   }
 }
 
 @media (min-width: 576px) {
   .card {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-    width: 300px;
-    height: 350px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    background: var(--primary-main);
-    overflow: hidden;
+    width: 100%;
   }
 }
 
-img {
+@media (min-width: 768px) {
+  .card {
+    width: 353px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 465px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 300px
+  }
+ }
+
+.logo-frame > img {
   object-fit: contain;
-  height: auto;
+  height: 100%;
   max-height: 100%;
 }
 
@@ -85,6 +98,13 @@ img {
   height: 90%;
   background: #FFF;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.logo-frame > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
 }
 
 .card-info {
@@ -107,17 +127,13 @@ img {
   gap: 0.5rem;
 }
 
-button {
-  width: 100%;
-  height: 2.25rem;
-  border-radius: 5px;
+.card-button {
   background: transparent;
   border: 2px solid var(--primary-main);
-  font-weight: bold;
   color: var(--primary-main);
 }
 
-button:hover {
+.card-button:hover {
   background: var(--primary-dark);
   border: 2px solid var(--primary-dark);
   color: #FFF;

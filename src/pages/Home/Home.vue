@@ -1,26 +1,26 @@
 <template>
-<div>
-  <section class="home-header">
-    <strong>Empresas Juniores Mineiras</strong>
-    <small>Busque por empresas Juniores.</small>
-    <input type="text" v-model="searchTerm" placeholder="Digite o nome da EJ..." />
-  </section>
-  <section class="home-filter">
-    <button @click="handleSortByNameClick" class="button-filter">
-      <span>Nome da EJ</span>
-      <svg xmlns="http://www.w3.org/2000/svg" :style="{ 'transform': orderByName === 'asc'?'rotate(-180deg)':'rotate(0deg)'}"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
-      </svg>
-    </button>
-  </section>
-  <section class="home-list">
-    <JuniorEnterpriseCard
-      v-for="juniorEnterprise in filteredJuniorEnterprises"
-      :key="juniorEnterprise.id"
-      :juniorEnterprise="juniorEnterprise"
-    />
-  </section>
-</div>
+  <div>
+    <section class="home-header">
+      <strong>Empresas Juniores Mineiras</strong>
+      <small>Busque por empresas Juniores.</small>
+      <input type="text" v-model="searchTerm" placeholder="Digite o nome da EJ..." />
+    </section>
+    <section class="home-filter">
+      <button @click="handleSortByNameClick" class="button-filter">
+        <span>Nome da EJ</span>
+        <svg xmlns="http://www.w3.org/2000/svg" :style="{ 'transform': orderByName === 'desc'?'rotate(-180deg)':'rotate(0deg)'}"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
+        </svg>
+      </button>
+    </section>
+    <section class="home-list">
+      <JuniorEnterpriseCard
+        v-for="juniorEnterprise in filteredJuniorEnterprises"
+        :key="juniorEnterprise.id"
+        :juniorEnterprise="juniorEnterprise"
+      />
+    </section>
+  </div>
 </template>
 
 <script>

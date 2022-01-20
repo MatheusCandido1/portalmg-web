@@ -3,7 +3,8 @@ import axios from 'axios';
 let API_URL = '';
 
 if (process.env.VUE_APP_ENV === 'env') {
-  API_URL = 'http://localhost:8000/api/v1';
+  // API_URL = 'http://localhost:8000/api/v1';
+  API_URL = 'http://192.168.0.181:8000/api/v1';
 } else {
   API_URL = 'https://portalmg-server.herokuapp.com/api/v1';
 }
